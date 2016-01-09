@@ -20,6 +20,7 @@ public class Executor {
 	}
 	
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void addList(TerminalNode terminalNode , List<TerminalNode> list,int level)
 	{
 		globalLists.add(new ListElement(terminalNode.toString(),(ArrayList)list,level));

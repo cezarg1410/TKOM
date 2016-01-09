@@ -13,7 +13,6 @@ public class Logging {
 	private static FileHandler fileHandler;
 	private static String LOG_DIR = "./txt/";
 	private static String LOG_EXT = ".txt";
-	//private final static String LOGGER_NAME = "ListLanguageLogger";
 
 	static 
 	{

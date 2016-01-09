@@ -7,8 +7,6 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 import antlr_classes.ListLanguageBaseListener;
 import antlr_classes.ListLanguageParser;
 
-import java.util.logging.*;
-
 public class MyListener extends ListLanguageBaseListener {
 
 	public ListLanguageParser parser;
