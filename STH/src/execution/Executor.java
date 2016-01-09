@@ -5,12 +5,14 @@ import java.util.List;
 
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+import elements.FunctionDefinition;
 import elements.ListElement;
 import elements.NumberElement;
 
 public class Executor {
 	public List <ListElement> globalLists;
 	public List <NumberElement> globalNumbers;
+	public List <FunctionDefinition> functions;
 	
 	
 	public Executor()

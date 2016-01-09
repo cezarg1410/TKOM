@@ -6,6 +6,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 
 import antlr_classes.ListLanguageBaseListener;
 import antlr_classes.ListLanguageParser;
+import antlr_classes.ListLanguageParser.Elementary_conditionContext;
 
 public class MyListener extends ListLanguageBaseListener {
 
@@ -114,8 +115,54 @@ public class MyListener extends ListLanguageBaseListener {
 	
 	@Override public void enterIf_statement( ListLanguageParser.If_statementContext ctx) 
 	{
-		//System.out.println(ctx.toStringTree());
+		System.out.println(ctx.toStringTree());
+		System.out.println("WARUNEK: "+ctx.condition().getText());
+		//switch(ctx.condition().elementary_condition().l)
+		
+		for(Elementary_conditionContext cond : ctx.condition().elementary_condition())
+		{
+			evalElementaryCondistion(cond);
+		}
+		
+	
 	}
+	
+	private boolean evalElementaryCondistion(Elementary_conditionContext cond) {
+		switch(cond.LOGICAL_OPERATOR().getText())
+		{
+			case "===":
+			{
+				break;
+			}
+			case "==":
+			{
+				break;
+			}
+			case "!=":
+			{
+				break;
+			}
+			case ">":
+			{
+				break;
+			}
+			case "<":
+			{
+				break;
+			}
+			case "<=":
+			{
+				break;
+			}
+			case ">=":
+			{
+				break;
+			}
+		}
+		
+		return true;
+	}
+
 	
 	@Override public void exitIf_statement( ListLanguageParser.If_statementContext ctx) 
 	{
@@ -124,7 +171,8 @@ public class MyListener extends ListLanguageBaseListener {
 	
 	@Override public void enterElementary_condition( ListLanguageParser.Elementary_conditionContext ctx) 
 	{
-		//System.out.println(ctx.toStringTree());
+		
+		System.out.println(ctx.toStringTree());
 	}
 	
 	@Override public void exitElementary_condition( ListLanguageParser.Elementary_conditionContext ctx) 
